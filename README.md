@@ -4,8 +4,8 @@ Experimenting with bootstrapping a Waggle system for use with systemd-nspawn.
 
 ## Dependencies
 
-This is current only tested on a Debian like Linux system. It uses `debootstrap`
-and `systemd-container`. To install these, run:
+This is currently only supported on a Debian like Linux system. It uses `debootstrap`
+and `systemd-container` to build and run the container. To install these, run:
 
 ```sh
 apt-get install debootstrap systemd-container
