@@ -15,14 +15,29 @@ ExecStart=
 ExecStart=-/sbin/agetty --noclear --autologin root --keep-baud console 115200,38400,9600 $TERM
 EOF
 
+# mock out waggle init
+mkdir -p $basedir/etc/systemd/system/waggle-init.service.d
+cat << EOF > $basedir/etc/systemd/system/waggle-init.d/override.conf
+[Service]
+ExecStart=/bin/true
+Restart=no
+EOF
+
 # ensure waggle image packages are installed
 systemd-nspawn -D $basedir bash -s << EOF
 apt-get update && apt-get install -y \
   git \
   python3 \
-  python3-pip
+  python3-pip \
+  openssh-server \
+  rabbitmq-server
 
-pip3 install git+https://github.com/waggle-sensor/pywaggle
+pip3 install \
+  git+https://github.com/waggle-sensor/pywaggle \
+  zmq
+
+mkdir /wagglerw
 EOF
 
-# add waggle-init override and make /wagglerw
+# TODO rabbitmq-server should install from more up to date repo
+# add waggle-init override
