@@ -11,7 +11,7 @@ if [ -z $basedir ]; then
   exit 1
 fi
 
-debootstrap stable $base
+debootstrap stable $basedir
 
 mkdir -p $basedir/etc/systemd/system/console-getty.service.d
 cat << EOF > $basedir/etc/systemd/system/console-getty.service.d/override.conf
