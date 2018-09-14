@@ -17,7 +17,7 @@ EOF
 
 # mock out waggle init
 mkdir -p $basedir/etc/systemd/system/waggle-init.service.d
-cat << EOF > $basedir/etc/systemd/system/waggle-init.d/override.conf
+cat << EOF > $basedir/etc/systemd/system/waggle-init.service.d/override.conf
 [Service]
 ExecStart=/bin/true
 Restart=no
