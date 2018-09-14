@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -e
 set -u
 
 basedir=$1
@@ -22,6 +21,8 @@ apt-get update && apt-get install -y \
   git \
   python3 \
   python3-pip
+
+pip3 install git+https://github.com/waggle-sensor/pywaggle
 EOF
 
 # add waggle-init override and make /wagglerw
