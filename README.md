@@ -22,7 +22,8 @@ environment in `basedir` and install some base packages and configuration.
 
 ## Running
 
-The `run` command uses `systemd-nspawn`
+The `run` command uses `systemd-nspawn` to boot the environment. The console is
+configured to autologin as root.
 
 ```sh
 ./run basedir
