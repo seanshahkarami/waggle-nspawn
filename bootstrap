@@ -36,7 +36,25 @@ pip3 install \
   git+https://github.com/waggle-sensor/pywaggle \
   zmq
 
-mkdir /wagglerw
+mkdir -p /wagglerw
+
+# need v2 branch???
+mkdir -p /usr/lib/waggle
+
+cd /usr/lib/waggle
+git clone https://github.com/waggle-sensor/core
+cd core
+./configure
+
+cd /usr/lib/waggle
+git clone https://github.com/waggle-sensor/nodecontroller
+cd core
+./configure
+
+cd /usr/lib/waggle
+git clone https://github.com/waggle-sensor/plugin_manager
+cd core
+./configure
 EOF
 
 # TODO rabbitmq-server should install from more up to date repo
