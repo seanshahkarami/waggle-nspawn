@@ -64,3 +64,6 @@ EOF
 
 # TODO rabbitmq-server should install from more up to date repo
 # add waggle-init override
+
+# remove shutdown when wagman connected
+# rm $basedir/etc/systemd/system/waggle-core.target.wants/waggle-monitor-shutdown.service
