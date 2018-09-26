@@ -23,6 +23,11 @@ ExecStart=
 ExecStart=-/bin/true
 EOF
 
+# mock out hbmode
+cat << EOF > $basedir/etc/waggle/hbmode
+wellness
+EOF
+
 # ensure waggle image packages are installed
 systemd-nspawn -D $basedir bash -s << EOF
 apt-get update && apt-get install -y \
