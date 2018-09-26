@@ -1,3 +1,6 @@
 #!/bin/sh
 
-echo '--- switching to operation mode ---'
+echo "Switching to operation mode..."
+systemctl set-default waggle-platform.target
+systemctl isolate waggle-platform.target
+echo "Switching to operation mode...Done"
