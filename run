@@ -2,4 +2,4 @@
 
 set -u
 
-systemd-nspawn -D $1 -b -x
+systemd-nspawn -D $1 -b -x --bind /dev/waggle_coresense --bind /dev/waggle_sysmon
