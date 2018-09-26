@@ -48,12 +48,12 @@ cd core
 
 cd /usr/lib/waggle
 git clone https://github.com/waggle-sensor/nodecontroller
-cd core
+cd nodecontroller
 ./configure
 
 cd /usr/lib/waggle
 git clone https://github.com/waggle-sensor/plugin_manager
-cd core
+cd plugin_manager
 ./configure
 EOF
 
