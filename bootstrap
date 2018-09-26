@@ -37,6 +37,9 @@ cat << EOF > $basedir/etc/waggle/hbmode
 wellness
 EOF
 
+# copy mocked out services
+cp bin/* $basedir/bin
+
 # ensure waggle image packages are installed
 systemd-nspawn -D $basedir bash -s << EOF
 useradd -m -p waggle waggle
