@@ -47,6 +47,7 @@ useradd -m -p waggle waggle
 apt-get update && apt-get install -y \
   git \
   curl \
+  socat \
   usbutils \
   net-tools \
   python3 \
