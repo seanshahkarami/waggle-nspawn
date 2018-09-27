@@ -56,6 +56,9 @@ apt-get update && apt-get install -y \
   autossh \
   rabbitmq-server
 
+# notes:
+# rabbitmq-server needs socat, but doesn't seem to install it automatically
+
 pip3 install \
   git+https://github.com/waggle-sensor/pywaggle \
   zmq
