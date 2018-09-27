@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo "Switching to operation mode..."
+touch /root/fs_locked
 systemctl set-default waggle-platform.target
 systemctl isolate waggle-platform.target
 echo "Switching to operation mode...Done"

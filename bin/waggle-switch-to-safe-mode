@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo "Switching to safe mode..."
+rm -f /root/fs_locked
 systemctl set-default waggle-core.target
 # systemctl isolate waggle-core.target
 echo "Switching to safe mode...Done"
