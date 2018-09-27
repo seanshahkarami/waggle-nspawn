@@ -63,7 +63,7 @@ pip3 install \
   git+https://github.com/waggle-sensor/pywaggle \
   zmq
 
-mkdir -p /wagglerw
+mkdir -p /wagglerw/waggle
 
 # need v2 branch???
 mkdir -p /usr/lib/waggle
