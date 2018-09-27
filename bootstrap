@@ -46,6 +46,7 @@ useradd -m -p waggle waggle
 
 apt-get update && apt-get install -y \
   git \
+  curl \
   python3 \
   python3-pip \
   openssh-server \
