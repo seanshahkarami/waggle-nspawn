@@ -65,6 +65,9 @@ pip3 install \
 
 mkdir -p /wagglerw/waggle
 
+mkdir -p /wagglerw/plugins
+chmod 700 /wagglerw/plugins
+
 # need v2 branch???
 mkdir -p /usr/lib/waggle
 
