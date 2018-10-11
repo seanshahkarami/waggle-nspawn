@@ -37,8 +37,8 @@ cat << EOF > $basedir/etc/waggle/hbmode
 wellness
 EOF
 
-# copy mocked out services
-cp bin/* $basedir/bin
+# copy utils and mocked out services
+cp bin/* $basedir/usr/bin
 
 # ensure waggle image packages are installed
 systemd-nspawn -D $basedir bash -s << EOF
@@ -85,10 +85,7 @@ cd /usr/lib/waggle
 git clone https://github.com/waggle-sensor/plugin_manager
 cd plugin_manager
 ./configure
+
+cd /wagglerw
+git clone https://github.com/waggle-sensor/pywaggle
 EOF
-
-# TODO rabbitmq-server should install from more up to date repo
-# add waggle-init override
-
-# remove shutdown when wagman connected
-# rm $basedir/etc/systemd/system/waggle-core.target.wants/waggle-monitor-shutdown.service
