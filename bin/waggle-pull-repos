@@ -1,0 +1,6 @@
+#!/bin/sh
+
+git -C /usr/lib/waggle/core pull
+git -C /usr/lib/waggle/nodecontroller pull
+git -C /usr/lib/waggle/plugin_manager pull
+git -C /wagglerw/pywaggle pull
