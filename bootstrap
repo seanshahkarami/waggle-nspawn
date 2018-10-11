@@ -37,9 +37,6 @@ cat << EOF > $basedir/etc/waggle/hbmode
 wellness
 EOF
 
-# copy utils and mocked out services
-cp bin/* $basedir/usr/bin
-
 # ensure waggle image packages are installed
 systemd-nspawn -D $basedir bash -s << EOF
 useradd -m -p waggle waggle
@@ -89,3 +86,6 @@ cd plugin_manager
 cd /wagglerw
 git clone https://github.com/waggle-sensor/pywaggle
 EOF
+
+# copy utils and mocked out services
+cp bin/* $basedir/usr/bin
