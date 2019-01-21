@@ -8,8 +8,11 @@ This is currently only supported on a Debian like Linux system. It uses `deboots
 and `systemd-container` to build and run the container. To install these, run:
 
 ```sh
-apt-get install debootstrap systemd-container
+apt-get install debootstrap systemd-container qemu-user-static
 ```
+
+Strictly speaking, `qemu-user-static` is just to allow cross platform builds, so it
+may or may not be required.
 
 ## Initial Setup
 
